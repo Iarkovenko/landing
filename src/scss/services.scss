@@ -1,0 +1,59 @@
+.services-section {
+  padding-top: 49px;
+}
+
+.header-services {
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 60px;
+  &__caption {
+    @include font-mixin('Kaushanscript-Regular', 24px, $dark-head);
+    margin-bottom: 23px;
+  }
+  &__title {
+    @include font-mixin('Montserrat-Bold', 30px, $dark-head);
+    text-transform: uppercase;
+    padding-bottom: 44px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      display: block;
+      height: 3px;
+      width: 60px;
+      background-color: $light-red;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
+    }
+  }
+}
+
+.article-block {
+  @include size(4);
+  @include size-lg(6);
+  @include size-sm(12);
+  min-height: 100px;
+  margin-bottom: 73px;
+  &__icon {
+    display: block;
+    float: left;
+    margin-right: 30px;
+  }
+  &__title {
+    @include font-mixin('Montserrat-Regular', 14px, $dark-head);
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  &__info {
+    @include font-mixin('Roboto-Regular', 15px, $light-grey);
+    line-height: 1.6;
+    margin-left: 62px;
+  }
+}
+
+.icon {
+    fill: $light-blue;
+}

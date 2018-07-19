@@ -1,0 +1,75 @@
+.masthead {
+  background: linear-gradient(
+      to top,
+      rgba($light-yellow, 0.9),
+      rgba($light-red, 0.9)
+    ),
+    url("/img/header-min.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  padding-top: 28px;
+  padding-bottom: 230px;
+}
+.nav-bar {
+  overflow: visible;
+  justify-content: space-between;
+  &__logo {
+    @include font-mixin("Montserrat-Bold", 30px, #ffffff);
+  }
+  &__nav {
+    display: flex;
+    align-content: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: 51.5%;
+  }
+}
+.nav__link {
+  @include font-mixin("Montserrat-Regular", 14px, #ffffff);
+  text-transform: uppercase;
+
+  line-height: 2.5;
+  border-bottom: 3px solid transparent;
+  transition: all 0.23s linear;
+  &:hover {
+    color: $light-yellow;
+    border-bottom-color: $light-yellow;
+  }
+}
+
+.nav-icon {
+  fill: #ffffff;
+  transition: fill 0.23s linear;
+  &:hover {
+    fill: $light-yellow;
+  }
+}
+
+.header-block {
+  padding-top: 168px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__subtitle {
+    @include font-mixin("Kaushanscript-Regular", 72px, #ffffff);
+    margin-bottom: 65px;
+  }
+  &__title {
+    @include font-mixin("Montserrat-Bold", 150px, #ffffff);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 124px;
+    line-height: 0.933;
+    max-width: 850px;
+  }
+  &__button {
+    @include font-mixin("Montserrat-Bold", 14px, #ffffff);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 2.5;
+    width: 158px;
+    height: 38px;
+    border: 3px solid white;
+    cursor: pointer;
+  }
+}

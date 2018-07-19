@@ -1,0 +1,119 @@
+.header-our-team {
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 60px;
+  &__caption {
+    @include font-mixin('Kaushanscript-Regular', 24px, $dark-head);
+    margin-bottom: 23px;
+  }
+  &__title {
+    @include font-mixin('Montserrat-Bold', 30px, $dark-head);
+    text-transform: uppercase;
+    padding-bottom: 44px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      display: block;
+      height: 3px;
+      width: 60px;
+      background-color: $light-red;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
+    }
+  }
+}
+
+.brief {
+  @include font-mixin('Roboto-Regular', 15px, $light-grey);
+  text-align: center;
+  line-height: 1.8;
+}
+
+.our-team {
+  padding-top: 95px;
+  padding-bottom: 90px;
+  &__item {
+    @include size(4);
+    @include size-md(12);   
+ 
+  }
+}
+
+.team-card {
+  position: relative;
+  background-color: $light-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before {
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.23s linear;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: '';
+    background: linear-gradient( to top, rgba($light-yellow, 0.9), rgba($light-red, 0.9))
+  }
+
+  &__social-links {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    & a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 56px;
+      height: 56px;
+      background-color: $light-yellow;
+    }
+   
+  }
+}
+.social-link {  
+  transition: all 0.23s linear;
+  &__icon {
+    fill: $light-red;
+  }
+  
+}
+.social-link:hover {
+  background-color: $light-red;
+}
+.social-link:hover .social-link__icon {
+  fill: #ffffff;
+}
+.team-card:hover img{
+  transition: all 0.23s linear;
+  transform: translate(-10px, -10px);  
+}
+.team-card:hover .team-card__social-links {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.23s linear;
+  transform: translate(-10px, -10px);  
+}
+.team-card:hover::before {
+  opacity: 1;
+  transform: translate(-10px, -10px);  
+}
+
+.team-info {
+  text-align: center;
+  padding: 30px 0px;
+  &__title {
+    @include font-mixin('Montserrat-Regular', 14px, $dark-head);
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    @include font-mixin('Roboto-Lightitalic', 15px, $light-grey);
+  }
+}

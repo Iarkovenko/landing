@@ -1,0 +1,43 @@
+.mastfoot {
+  padding: 11px 0px;
+  border-top: 2px solid #e5e5e5;
+  & .row {
+    justify-content: space-between;
+  }
+}
+
+.copyright {
+  @include font-mixin('Montserrat-Regular', 14px, $dark-head);
+  font-weight: 700;
+  align-self: center;
+  &__link {
+    color: $light-red;
+  }
+}
+
+.form-subscribe {
+    display: flex;
+  &__input {
+    max-width: 230px;
+    height: 40px;
+    padding: 12px 10px;
+    border: 1px solid #e5e5e5;
+    &::placeholder {
+        @include font-mixin('Roboto-Lightitalic', 15px, #cccccc)
+    }
+    &:valid {
+      border: green;
+    }
+  }
+  &__btn {
+    padding: 15px 0;
+    border: none;
+    height: 40px;
+    width: 150px;
+    text-transform: uppercase;
+    background-color: $light-blue;
+    @include font-mixin('Montserrat-Bold', 14px, #ffffff);
+    cursor: pointer;
+}
+  
+}

@@ -1,0 +1,33 @@
+@include reset();
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.container {
+  @include wrapper();
+}
+
+.row {
+  @include row-flex();
+  overflow: hidden;
+}
+
+.item {
+  @include col();
+}
+
